@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r)p26($&qz#n$1_*-2q2)7v6c3)zaf(8%_n+n9q_4x!!$9_s!c'
+SECRET_KEY = '********************************************************'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -86,9 +86,9 @@ WSGI_APPLICATION = 'NabegheMagazine_01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nabeghe_magazine',
-        'USER': 'nabeghemag_admin',
-        'PASSWORD': '@nabeghemag#1376',
+        'NAME': 'magazine',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
         'HOST': 'localhost',
         'PORT': 5432,
     }
@@ -115,7 +115,7 @@ SIMPLE_JWT = {
 }
 
 sentry_sdk.init(
-    dsn="https://2bc9995a5aac4ed1a86764f022223b33@o4504136726609920.ingest.sentry.io/4504136736178176",
+    dsn="*****************************************************************",
     integrations=[DjangoIntegration()],
     traces_sample_rate=1.0,
     send_default_pii=True,
