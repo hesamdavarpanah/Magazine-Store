@@ -152,6 +152,12 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+accounts/profile_pictures
+article/article_images
+magazine/magazine_images
+magazine/magazine_pdf_files
+magazine/page_images
+package/package_images
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
