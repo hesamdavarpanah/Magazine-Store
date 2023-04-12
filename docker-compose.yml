@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  postgresql:
+    container_name: "nabeghe-postgresql"
+    image: "postgres:latest"
+    environment:
+      - POSTGRES_DB=nabeghemagdb
+      - POSTGRES_USER=nabeghemag_admin
+      - POSTGRES_PASSWORD=@nabeghemag#1376
+    networks:
+      - backend
+    restart: "on-failure"
+
+  gateway:
+    container_name: "nabeghe-gateway"
+    image: "nabeghe-gateway"
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./accounts/profile_images:/code/accounts/profile_images
+      - .article/article_images:/code/article/article_images
+      - ./magazine/magazine_images:/code/magazine/magazine_images
+      - ./magazine/magazine_pdf_files:/code/magazine/magazine_pdf_files
+      - ./magazine/page_images:/code/magazine/page_images
+      - ./market/package_images:/code/market/package_images
+    environment:
+      - POSTGRES_NAME=nabeghemagdb
+      - POSTGRES_USER=nabeghemag_admin
+      - POSTGRES_PASSWORD=@nabeghemag#1376
+      - DJANGO_SUPERUSER_USERNAME=hesam108
+      - DJANGO_SUPERUSER_PASSWORD=hdd1376212108d#
+      - DJANGO_SUPERUSER_EMAIL=hesamdavarpanah@gmail.com
+      - GATEWAY_HOST=0.0.0.0
+      - GATEWAY_PORT=8000
+    networks:
+      - backend
+    restart: "on-failure"
+networks:
+  - backend:
+
