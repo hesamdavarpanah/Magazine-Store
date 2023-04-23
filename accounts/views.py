@@ -45,7 +45,7 @@ class LoginViewSet(ModelViewSet):
             sms_validator = randint(100000, 999999)
             print(sms_validator)
 
-            # sms = Ghasedak("5d8a1ba6071c1becd307978667d874162f0b09039c8e5c034db7261f7b2eb6e5")
+            # sms = Ghasedak("xxxxxxx")
             # sms.send({
             #     "receptor": request.data["phone_number"],
             #     "linenumber": "30005088",
@@ -87,7 +87,7 @@ class ValidatorViewSet(ModelViewSet):
         elif request.data["repeat_code"] is True:
             sms_validator = randint(100000, 999999)
 
-            # sms = Ghasedak("5d8a1ba6071c1becd307978667d874162f0b09039c8e5c034db7261f7b2eb6e5")
+            # sms = Ghasedak("xxxxxxxxxxxx")
             # sms.send({
             #     "receptor": phone_number,
             #     "linenumber": "30005088",
@@ -171,7 +171,7 @@ class PasswordViewSet(ModelViewSet):
             forget_password = True
             new_sms_validator = randint(100000, 999999)
 
-            # sms = Ghasedak("5d8a1ba6071c1becd307978667d874162f0b09039c8e5c034db7261f7b2eb6e5")
+            # sms = Ghasedak("xxxxxxxxx")
             # sms.send({
             #     "receptor": phone_number,
             #     "linenumber": "30005088",
