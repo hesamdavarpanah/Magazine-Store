@@ -18,7 +18,7 @@ To run this project locally, you need to have Python 3.8 or higher and pip insta
 
 - Clone this repository to your local machine: `git clone https://github.com/hesamdavarpanah/Magazine-Store.git`
 - Navigate to the project directory: `cd Magazine-Store`
-- 3. Run the Project with this command on your terminal:
+- Run the Project with this command on your terminal:
 ```console
 root@user:~$ docker compose up
 running...
