@@ -15,6 +15,7 @@ WORKDIR /code
 COPY requirements.txt .
 RUN pip install -r /code/requirements.txt
 
+COPY . /code
 RUN chmod +x ./run.sh
 RUN chmod -R 777 ./
 
