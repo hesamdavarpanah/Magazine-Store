@@ -1,6 +1,8 @@
+Sure, I can help you create a GitHub README for your repo that uses Python Django deployed on Docker Compose. Here is a possible template that you can use:
+
 # Magazine Store
 
-This is a web application that allows users to browse, buy, and rate magazines online. It is built with Python Django framework and uses SQLite as the database.
+This is a web application that allows users to browse, buy, and rate magazines online. It is built with Python Django framework and deployed on Docker Compose.
 
 ## Features
 
@@ -14,19 +16,16 @@ This is a web application that allows users to browse, buy, and rate magazines o
 
 ## Installation
 
-To run this project locally, you need to have Python 3.8 or higher and pip installed on your system. Then follow these steps:
+To run this project locally, you need to have Docker and Docker Compose installed on your system. Then follow these steps:
 
 - Clone this repository to your local machine: `git clone https://github.com/hesamdavarpanah/Magazine-Store.git`
 - Navigate to the project directory: `cd Magazine-Store`
-- Run the Project with this command on your terminal:
-```console
-root@user:~$ docker compose up
-running...
-```
+- Build and run the Docker containers: `docker-compose up -d`
+- Open your browser and go to http://localhost:8000/ to see the website.
 
 ## Testing
 
-To run the tests, use this command on the container: `python manage.py test`
+To run the tests, use this command: `docker-compose run web python manage.py test`
 
 ## License
 
