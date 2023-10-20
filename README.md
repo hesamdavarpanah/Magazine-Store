@@ -29,4 +29,4 @@ To run the tests, use this command: `docker-compose run web python manage.py tes
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE] file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
